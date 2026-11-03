@@ -1,0 +1,40 @@
+:root { color-scheme: dark; font-family: Arial, Helvetica, sans-serif; background: #080808; color: #f5f5f5; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.todo { width: min(680px, calc(100% - 40px)); margin: 0 auto; padding: 100px 0 40px; }
+.eyebrow { color: #aaa; font-size: 11px; letter-spacing: 3px; margin: 0 0 24px; }
+h1 { margin: 0; font-size: clamp(38px, 7vw, 56px); font-weight: 600; letter-spacing: -2.5px; }
+h1 span { color: #777; }
+.subtitle { color: #aaa; font-size: 15px; margin: 18px 0 40px; line-height: 1.6; }
+form { display: flex; gap: 10px; margin-bottom: 44px; }
+#task-input { flex: 1; min-width: 0; padding: 17px 18px; background: #141414; border: 1px solid #353535; border-radius: 10px; color: #fff; }
+#task-input::placeholder { color: #999; }
+.add-button { padding: 0 20px; background: #f5f5f5; color: #111; border: 0; border-radius: 10px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.add-button span { font-size: 20px; margin-right: 6px; vertical-align: -1px; }
+.add-button:hover { background: #d9d9d9; }
+:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+.list-heading { display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid #292929; }
+h2 { margin: 0; color: #aaa; font-size: 11px; font-weight: 500; letter-spacing: 2px; }
+#counter { color: #aaa; font-size: 12px; }
+ul { list-style: none; margin: 0; padding: 0; }
+.task { display: flex; align-items: center; gap: 14px; padding: 18px 2px; border-bottom: 1px solid #242424; }
+.task label { flex: 1; display: flex; align-items: center; gap: 14px; min-width: 0; cursor: pointer; }
+.task input { width: 20px; height: 20px; flex-shrink: 0; margin: 0; accent-color: #fff; cursor: pointer; }
+.task-text { font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; white-space: pre-wrap; }
+.task.completed .task-text { color: #999; text-decoration: line-through; }
+.delete-button { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border: 0; border-radius: 8px; background: transparent; color: #aaa; }
+.delete-button:hover { color: #fff; background: #252525; }
+.delete-button svg { width: 18px; height: 18px; }
+#empty-state { text-align: center; padding: 52px 0 54px; border-bottom: 1px solid #242424; }
+#empty-state[hidden] { display: none; }
+.empty-icon { display: grid; place-items: center; width: 42px; height: 42px; margin: 0 auto 18px; border: 1px solid #383838; border-radius: 50%; color: #bbb; font-size: 20px; }
+#empty-state p { font-size: 15px; margin: 0 0 10px; }
+#empty-state span { color: #999; font-size: 13px; }
+#message { font-size: 13px; line-height: 1.5; color: #ddd; }
+#message:empty { display: none; }
+footer { color: #999; font-size: 12px; margin-top: 28px; line-height: 1.6; }
+footer span { margin-right: 6px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 480px) { .todo { padding-top: 56px; } form { gap: 8px; } .add-button { padding: 0 13px; } .add-button span { display: none; } #task-input { padding: 16px 12px; } }
